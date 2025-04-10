@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/quiz_button_style.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() startQuiz;
@@ -24,19 +25,10 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30),
-          OutlinedButton.icon(
-            style: OutlinedButton.styleFrom(
-              side: BorderSide(color: Colors.white),
-            ),
-            onPressed: startQuiz,
-            label: Text(
-              "Start Quiz",
-              style: TextStyle(color: Colors.white),
-            ),
-            icon: Icon(
-              Icons.arrow_right_alt,
-              color: Colors.white,
-            ),
+          QuizButton(
+            onTap: startQuiz,
+            icon: Icons.arrow_right_alt,
+            text: 'Start Quiz',
           )
         ],
       ),
