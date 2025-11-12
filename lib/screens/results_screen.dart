@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_summary/questions_summary.dart';
-import 'package:quiz_app/quiz_button_style.dart';
+import 'package:quiz_app/widgets/quiz_button_style.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
@@ -30,7 +30,9 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int numberOfCorrectAnswers = summaryData
-        .where((element) => element['correct-answer'] == element['user-answer'])
+        .where((element) =>
+            element['correct-answer'] ==
+            element['user-answer'])
         .length;
     int numberOfQuestions = questions.length;
     return Container(
@@ -42,7 +44,8 @@ class ResultsScreen extends StatelessWidget {
           Text(
             "You have answered $numberOfCorrectAnswers out of $numberOfQuestions questions correctly!",
             style: GoogleFonts.lato(
-              color: const Color.fromARGB(198, 202, 234, 165),
+              color:
+                  const Color.fromARGB(198, 202, 234, 165),
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),

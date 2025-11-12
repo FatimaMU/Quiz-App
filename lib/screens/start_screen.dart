@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/quiz_button_style.dart';
+import 'package:quiz_app/widgets/quiz_button_style.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() startQuiz;
